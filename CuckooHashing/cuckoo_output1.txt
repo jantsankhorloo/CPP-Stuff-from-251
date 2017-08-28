@@ -1,0 +1,33 @@
+21 in T1[0]!
+38 in T1[2]!
+21 out T1[0]
+no out 48
+109 in T1[1]!
+76 in T1[1]
+109 in T2[1]!
+56 in T1[2]
+38 in T2[0]!
+38 at T2[0]
+no out 55
+38 at T2[0]
+no 24
+no out 66
+40 in T1[1]
+76 in T2[0]
+38 in T1[2]
+56 in T2[0]
+maxloop reached
+56 in T1[2]!
+40 in T1[4]!
+109 in T1[1]!
+38 in T1[2]
+56 in T2[1]!
+76 in T1[4]
+40 in T2[0]!
+30 in T1[0]!
+73 in T1[1]
+109 in T2[4]!
+no out 49
+56 out T2[1]
+21 in T1[3]!
+40 at T2[0]
