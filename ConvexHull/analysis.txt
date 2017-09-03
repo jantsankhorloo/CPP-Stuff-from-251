@@ -1,0 +1,18 @@
+1. Graham Scan - for degenerate cases that is while there are points coinciding or collinear points, I used my result hull vector as a stack and popped bad points out. TO determine they are degenerate I use leftTurn function called comp1 in the hull.cpp implementation.
+
+In other words, I keep removing points from the hull vector while the angle formed by points next to the top of stack, top, and points[i] makes a non left turn.
+
+Gift-Wrapping - I use the leftTurn function here again to detect points not counterclockwise. My loop starts from the leftmost point, and keep moving counterclockwise until it reaches the start again. 
+
+2. Best - inputs would include points that are already sorted and lowest y coordinate at index 0. In best case, this algorithm can run O(n) due to good sorting input.
+
+Worst - inputs would include descending order input (i.e. 3,2,1), so that the sorting algorithm takes full O(nlogn). Also there are points that will be collinear and coinciding between two points. So the algorithms takes O(n) time to determine to reject or accept the point. If the lowest y coordinate is towards the end of the vector there will be O(n) search for it.
+
+3. 				Best 							Avg 		Worst
+Graham			O(n) best case quicksort	O(nlogn)     O(n^2) worst case quicksort
+Jarvis			O(nlogn)					O(nlogn)	 O(n^2)
+
+4. Each point is added to hull only once, so all push operation takes O(n). 
+Lowest y coordinate find is O(n) and we examine several triplets to consecutive points to determine if the middle point should be removed, so that is O(n). Now radix sort time complexity will be O(n * w) where n is the number of input points and w is the word size. But on average with radix sort the Graham sort will still run O(nlogn) with memory complexity of O(n + w).
+
+If Graham sorted along x axis the algorithm will run O(nlogn). It is called Andrew's monotone chain convex hull algorithm.
